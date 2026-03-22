@@ -2,8 +2,19 @@ Para guardar
 entro en la carpeta abro el terminal y poner
 
 git init
-git add.
+git add .
 git commit -m "xxxxxxxxxx"
 
 git branch -M main
 git push -u origin main
+
+
+
+
+Para guardar de la nube al local
+git pull origin main
+
+
+
+
+Quitar los botones
