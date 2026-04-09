@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>RoloTrip</title>
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- ========== NAVBAR ========== -->
+  <header class="navbar">
+    <div class="navbar__logo">Rolo <span>Trip</span></div>
+
+    <nav class="navbar__links">
+      <a href="#explorar"          data-i18n="navExplore">Explorar</a>
+      <a href="pages/mapa.html"    data-i18n="navMap">Mapa</a>
+      <a href="pages/lugares.html" data-i18n="navPlaces">Lugares</a>
+      <a href="#tips"              data-i18n="navTips">Tips</a>
+    </nav>
+
+    <div class="lang-toggle">
+      <button class="lang-btn active" id="btn-es">ES</button>
+      <button class="lang-btn" id="btn-en">EN</button>
+    </div>
+
+    <button class="hamburger" id="hamburger" aria-label="Menú">
+      <span></span><span></span><span></span>
+    </button>
+  </header>
+
+  <!-- Mobile menu -->
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="#explorar"          data-i18n="navExplore">Explorar</a>
+    <a href="pages/mapa.html"    data-i18n="navMap">Mapa</a>
+    <a href="pages/lugares.html" data-i18n="navPlaces">Lugares</a>
+    <a href="#tips"              data-i18n="navTips">Tips</a>
+  </div>
+
+  <!-- ========== HERO ========== -->
+  <section class="hero">
+    <div class="hero__content">
+      <p class="hero__eyebrow" data-i18n="heroEyebrow">La ciudad que aún no conoces</p>
+      <h1 class="hero__title" data-i18n="heroTitle">Descubre la <em>Bogotá</em><br>que vive entre calles</h1>
+      <p class="hero__sub" data-i18n="heroSub">
+        Lugares secretos, sabores auténticos y experiencias que los guías nunca te muestran.
+        Para locales y viajeros que quieren ir más allá.
+      </p>
+
+      <div class="search-box">
+        <svg class="search-box__icon" viewBox="0 0 20 20" fill="none">
+          <circle cx="8.5" cy="8.5" r="5.5" stroke="currentColor" stroke-width="1.5"/>
+          <path d="M13 13l3.5 3.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+        </svg>
+        <input
+          type="text"
+          id="searchInput"
+          data-i18n-placeholder="searchPlaceholder"
+          placeholder="Busca un barrio, sabor o experiencia..."
+        />
+        <button id="searchBtn" data-i18n="searchBtn">Buscar</button>
+      </div>
+    </div>
+
+    <div class="hero__visual">
+      <div class="map-mock">
+        <div class="map-mock__grid"></div>
+        <div class="map-pin" style="top:35%;left:42%"></div>
+        <div class="map-pin" style="top:55%;left:63%;width:7px;height:7px;animation-delay:.4s"></div>
+        <div class="map-pin" style="top:25%;left:70%;width:8px;height:8px;animation-delay:.8s"></div>
+        <div class="map-pin" style="top:68%;left:30%;width:9px;height:9px;animation-delay:.2s"></div>
+        <div class="map-pin" style="top:45%;left:20%;width:6px;height:6px;animation-delay:1.2s"></div>
+        <div class="map-pin" style="top:50%;left:52%;width:11px;height:11px;animation-delay:.6s"></div>
+        <div class="map-mock__label">Bogotá, Colombia · 2.600 m s.n.m.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== ESTADÍSTICAS ========== -->
+  <div class="stats-bar">
+    <div class="stat">
+      <span class="stat__num">80+</span>
+      <span class="stat__label" data-i18n="stat1">Lugares únicos</span>
+    </div>
+    <div class="stat__divider"></div>
+    <div class="stat">
+      <span class="stat__num">12</span>
+      <span class="stat__label" data-i18n="stat2">Barrios explorados</span>
+    </div>
+    <div class="stat__divider"></div>
+    <div class="stat">
+      <span class="stat__num">2</span>
+      <span class="stat__label" data-i18n="stat3">Idiomas</span>
+    </div>
+    <div class="stat__divider"></div>
+    <div class="stat">
+      <span class="stat__num">100%</span>
+      <span class="stat__label" data-i18n="stat4">Fuera de lo común</span>
+    </div>
+  </div>
+
+  <!-- ========== CATEGORÍAS ========== -->
+  <section class="categories" id="explorar">
+    <div class="section-header">
+      <p class="section-label" data-i18n="catsLabel">Explorar por categoría</p>
+      <h2 class="section-title" data-i18n="catsTitle">¿Qué quieres descubrir hoy?</h2>
+    </div>
+
+    <div class="cats-grid">
+      <div class="cat-card active" data-cat="sabores">
+        <div class="cat-card__icon">☕</div>
+        <h3 data-i18n="cat1">Sabores locales</h3>
+        <p data-i18n="cat1sub">Tiendas de barrio, mercados vivos y cocina que no sale en Instagram</p>
+      </div>
+      <div class="cat-card" data-cat="arte">
+        <div class="cat-card__icon">🎨</div>
+        <h3 data-i18n="cat2">Arte urbano</h3>
+        <p data-i18n="cat2sub">Murales, galerías independientes y cultura callejera</p>
+      </div>
+      <div class="cat-card" data-cat="naturaleza">
+        <div class="cat-card__icon">🌿</div>
+        <h3 data-i18n="cat3">Naturaleza escondida</h3>
+        <p data-i18n="cat3sub">Cerros, humedales y parques que la ciudad guarda en silencio</p>
+      </div>
+      <div class="cat-card" data-cat="barrios">
+        <div class="cat-card__icon">🏘️</div>
+        <h3 data-i18n="cat4">Barrios emergentes</h3>
+        <p data-i18n="cat4sub">Zonas con identidad propia, lejos del circuito turístico</p>
+      </div>
+      <div class="cat-card" data-cat="noche">
+        <div class="cat-card__icon">🌙</div>
+        <h3 data-i18n="cat5">Planes nocturnos</h3>
+        <p data-i18n="cat5sub">La Bogotá que despierta cuando el sol se va</p>
+      </div>
+      <div class="cat-card" data-cat="mercados">
+        <div class="cat-card__icon">🛒</div>
+        <h3 data-i18n="cat6">Mercados y plazas</h3>
+        <p data-i18n="cat6sub">Plazas de mercado que son el corazón real de los barrios</p>
+      </div>
+      <div class="cat-card" data-cat="cafe">
+        <div class="cat-card__icon">☕</div>
+        <h3 data-i18n="cat7">Café local</h3>
+        <p data-i18n="cat7sub">Tiendas de especialidad, librerías con café y tostadores independientes</p>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ========== LUGARES DESTACADOS ========== -->
+  <section class="featured" id="lugares">
+    <div class="section-header">
+      <p class="section-label" data-i18n="featLabel">Selección editorial</p>
+      <h2 class="section-title" data-i18n="featTitle">Lugares que te van a sorprender</h2>
+    </div>
+
+    <div class="places-grid" id="placesGrid">
+      <!-- Las cards se renderizan desde main.js -->
+    </div>
+
+    <div class="featured__cta">
+      <a href="pages/lugares.html" class="btn-outline" data-i18n="featCta">Ver todos los lugares</a>
+    </div>
+  </section>
+
+  <!-- ========== TIPS PRÁCTICOS ========== -->
+  <section class="tips" id="tips">
+    <div class="section-header">
+      <p class="section-label" data-i18n="tipsLabel">Antes de salir</p>
+      <h2 class="section-title" data-i18n="tipsTitle">Tips para moverte como local</h2>
+    </div>
+
+    <div class="tips-grid">
+      <div class="tip-card">
+        <span class="tip-card__icon">🌦️</span>
+        <h4 data-i18n="tip1">Clima</h4>
+        <p data-i18n="tip1sub">Bogotá tiene 4 estaciones en un día. Lleva siempre una chaqueta y no te fíes del sol de la mañana.</p>
+      </div>
+      <div class="tip-card">
+        <span class="tip-card__icon">🚌</span>
+        <h4 data-i18n="tip2">Transporte</h4>
+        <p data-i18n="tip2sub">TransMilenio y SITP cubren toda la ciudad. La tarjeta TuLlave es tu mejor aliada para moverte barato.</p>
+      </div>
+      <div class="tip-card">
+        <span class="tip-card__icon">💵</span>
+        <h4 data-i18n="tip3">Moneda</h4>
+        <p data-i18n="tip3sub">Peso colombiano (COP). Muchos lugares de barrio solo aceptan efectivo — lleva siempre algo de cash.</p>
+      </div>
+      <div class="tip-card">
+        <span class="tip-card__icon">🕐</span>
+        <h4 data-i18n="tip4">Horarios</h4>
+        <p data-i18n="tip4sub">Los mercados arrancan temprano (6am). Los bares de culto abren tarde. Bogotá no tiene un solo ritmo.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="footer">
+    <div class="footer__logo">Bogotá <span>Oculta</span></div>
+    <p class="footer__sub" data-i18n="footerSub">Hecha con amor por alguien que también está redescubriendo la ciudad.</p>
+    <p class="footer__copy">© 2025 Bogotá Oculta</p>
+  </footer>
+
+  <script src="js/main.js"></script>
+    <script src="js/script.js"></script>
+    <script async src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCvcP6YHB2yeBhCaKwJhKr1AiQ30DwfdW4&callback=initMap"></script>
+</body>
+</html>
